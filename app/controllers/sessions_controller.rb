@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(name: params[:user][:name])
     #binding.pry
-    if user && user.password == params[:user][:password]
+    if user && user.authenticate(params[:user][:password])
     #if user 
       # Login the user in and redirect to their books page
       log_in user
