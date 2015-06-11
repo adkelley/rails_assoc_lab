@@ -1,0 +1,8 @@
+<h1><%= @user.name %>'s Books</h1>
+<div>
+  <% @user.books.each do |book| %>
+  <h3> <%= book.title %> </h3>
+<% end %>
+
+<%= link_to '<button type="button">Log out</button>'.html_safe, logout_path %>
+</div>

@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+  get 'users/show'
+
+  get 'user/show'
+
   get 'books/show'
 
   root to: "welcome#index"
